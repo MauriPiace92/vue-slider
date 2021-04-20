@@ -19,7 +19,7 @@
         <div class="slider-container">
             <!-- slider content -->
             <div class="slider-content">
-                <div @click="nextImage" class="arrow">
+                <div  class="arrow"  @click="prevImage" >
                     <i class="far fa-arrow-alt-circle-left"></i>
                 </div>
 
@@ -27,7 +27,7 @@
                     <img :src="images[countIndexImg]" alt="images">
                 </div>
 
-                <div class="arrow">
+                <div class="arrow"  @click="nextImage">
                     <i class="far fa-arrow-alt-circle-right"></i>
                 </div>
 
