@@ -42,7 +42,11 @@ var app= new Vue(
                 }
                 
             }
-
+        },
+        created(){
+            setInterval(() =>{ 
+                this.nextImage(); 
+            }, 3000);
         }
     }
 );
