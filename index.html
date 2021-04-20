@@ -19,12 +19,12 @@
         <div class="slider-container">
             <!-- slider content -->
             <div class="slider-content">
-                <div class="arrow">
+                <div @click="nextImage" class="arrow">
                     <i class="far fa-arrow-alt-circle-left"></i>
                 </div>
 
                 <div class="images">
-                    <img src="img/campagna.jpg" alt="">
+                    <img :src="images[countIndexImg]" alt="images">
                 </div>
 
                 <div class="arrow">
@@ -34,14 +34,13 @@
             </div>
             <!-- end slider content -->
             <!-- cirles content -->
-            <span class="circles">
+            <div class="circles">
 
-                <i class="far fa-dot-circle"></i>
-                <i class="far fa-dot-circle"></i>
-                <i class="far fa-dot-circle"></i>
-                <i class="far fa-dot-circle"></i>
-
-            </span>
+                <span v-for='(image, index) in images'  class="circle" :class="{ 'active' : index == countIndexImg} ">
+                    <i class="far fa-dot-circle"></i>
+                </span>
+                
+            </div>
             <!-- End cirles content -->
             
 
